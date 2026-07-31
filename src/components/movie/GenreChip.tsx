@@ -15,7 +15,12 @@ export default function GenreChip({ label, index = 0, color }: GenreChipProps) {
 
   return (
     <View style={[styles.chip, { backgroundColor: background }]}>
-      <AppText variant="label" color={colors.textInverse} numberOfLines={1}>
+      <AppText
+        variant="label"
+        color={colors.textInverse}
+        numberOfLines={1}
+        style={styles.label}
+      >
         {label}
       </AppText>
     </View>
@@ -30,4 +35,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  label: { fontSize: dp(11) },
 });

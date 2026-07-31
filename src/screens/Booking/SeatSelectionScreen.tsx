@@ -318,7 +318,11 @@ export default function SeatSelectionScreen({ route, navigation }: Props) {
                   onPress={() => onToggleSeat(seat)}
                   accessibilityRole="button"
                   accessibilityLabel={`Remove row ${seat.row} seat ${seat.column}`}
-                  style={{ marginLeft: dp(8) }}
+                  hitSlop={spacing.xs}
+                  style={({ pressed }) => [
+                    styles.chipClose,
+                    pressed && styles.chipClosePressed,
+                  ]}
                 >
                   <CloseIcon size={dp(16)} color={colors.textPrimary} />
                 </Pressable>
@@ -457,7 +461,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: spacing.md,
-    paddingVertical: spacing.xs,
     borderRadius: radius.md,
     backgroundColor: colors.background,
   },
@@ -465,6 +468,15 @@ const styles = StyleSheet.create({
     fontSize: dp(12),
     lineHeight: dp(14),
   },
+  chipClose: {
+    width: dp(30),
+    height: dp(30),
+    marginRight: -dp(8),
+    marginLeft: dp(4),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  chipClosePressed: { opacity: 0.65 },
   footer: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
   totalBox: {
     paddingHorizontal: spacing.md,
