@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "MovieBooking",
+    "slug": "MovieBooking",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/app-icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "requireFullScreen": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/app-icon.png",
+        "backgroundImage": "./assets/images/app-icon.png",
+        "monochromeImage": "./assets/images/app-icon.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.oshirazhw294.MovieBooking"
+    },
+    "web": {
+      "favicon": "./assets/images/app-icon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-image",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./assets/images/app-icon.png",
+          "imageWidth": 120,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-navigation-bar",
+        {
+          "enforceContrast": true,
+          "hidden": false,
+          "style": "light"
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "PORTRAIT_UP"
+        }
+      ]
+    ]
+  }
+}
